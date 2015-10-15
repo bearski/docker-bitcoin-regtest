@@ -1,4 +1,4 @@
-FROM ubuntu:precise
+FROM ubuntu:trusty
 
 RUN apt-get -y update
 RUN apt-get install -y python-software-properties 
