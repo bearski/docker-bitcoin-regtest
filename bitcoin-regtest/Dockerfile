@@ -1,13 +1,13 @@
 FROM ubuntu:trusty
 
-RUN apt-get -y update
-RUN apt-get install -y python-software-properties 
+RUN sudo apt-get -y update
+RUN sudo apt-get install -y python-software-properties 
 
-RUN add-apt-repository ppa:bitcoin/bitcoin
-RUN apt-get update
-RUN apt-get install -y bitcoind
+RUN sudo add-apt-repository ppa:bitcoin/bitcoin
+RUN sudo apt-get update
+RUN sudo apt-get install -y bitcoind
 
-RUN mkdir ~/.bitcoin
-RUN echo "rpcuser=test\nrpcpassword=test\n" > ~/.bitcoin/bitcoin.conf
+RUN sudo mkdir ~/.bitcoin
+RUN sudo echo "rpcuser=test\nrpcpassword=test\n" > ~/.bitcoin/bitcoin.conf
 
-RUN echo "alias rt='bitcoind -regtest'" >> ~/.bashrc
+RUN sudo echo "alias rt='bitcoind -regtest'" >> ~/.bashrc
