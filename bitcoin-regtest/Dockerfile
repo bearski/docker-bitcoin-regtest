@@ -1,5 +1,7 @@
 FROM ubuntu:trusty
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN sudo apt-get -y update
 RUN sudo apt-get install -y python-software-properties 
 
